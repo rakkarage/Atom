@@ -12,7 +12,7 @@ public class TestPlayer : MonoBehaviour
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		TestMob mob = other.gameObject.GetComponent<TestMob>();
+		var mob = other.gameObject.GetComponent<TestMob>();
 		if (mob != null)
 			Health.Value -= mob.Damage.Value;
 	}
