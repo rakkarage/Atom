@@ -8,6 +8,7 @@ namespace ca.HenrySoftware.Atom
 		public AtomEvent<T> Added;
 		public AtomEvent<T> Removed;
 		public AtomEvent Cleared;
+		// todo: need use events!
 		public void Add(T t)
 		{
 			if (!Items.Contains(t))
