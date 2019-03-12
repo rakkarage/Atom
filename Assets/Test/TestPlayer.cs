@@ -3,12 +3,12 @@ using UnityEngine;
 public class TestPlayer : MonoBehaviour
 {
 	public AtomInt Health;
-	public AtomInt StartHealth;
+	public AtomInt HealthStart;
 	public bool Reset = true;
 	private void Start()
 	{
 		if (Reset)
-			Health = StartHealth;
+			Health = HealthStart;
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
