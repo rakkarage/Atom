@@ -4,6 +4,7 @@ namespace ca.HenrySoftware.Atom
 	public abstract class AtomReference<T> : ScriptableObject
 	{
 		public AtomEvent<T> Changed;
+		[SerializeField]
 		private T _value;
 		public T Value
 		{

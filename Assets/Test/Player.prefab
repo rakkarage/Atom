@@ -120,6 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90981d3c5834d119dbd969c9fb1b01bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: {fileID: 0}
-  HealthStart: {fileID: 0}
+  Health: {fileID: 11400000, guid: 3e634cecab59b85059cb79ba5c8edaf8, type: 2}
+  HealthStart: {fileID: 11400000, guid: 603bf79fc2e25299693b5961c8255888, type: 2}
   Reset: 1
