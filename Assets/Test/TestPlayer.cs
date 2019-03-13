@@ -16,4 +16,8 @@ public class TestPlayer : MonoBehaviour
 		if (mob != null)
 			Health.Value -= mob.Damage.Value;
 	}
+	public void OnHealthChanged(int health)
+	{
+		Debug.Log(health);
+	}
 }

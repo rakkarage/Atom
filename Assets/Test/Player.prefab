@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 953067771709931113}
   - component: {fileID: 2029607164763826847}
   - component: {fileID: 953067771709931111}
+  - component: {fileID: 1858370116887053180}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -123,3 +124,32 @@ MonoBehaviour:
   Health: {fileID: 11400000, guid: 3e634cecab59b85059cb79ba5c8edaf8, type: 2}
   HealthStart: {fileID: 11400000, guid: 603bf79fc2e25299693b5961c8255888, type: 2}
   Reset: 1
+--- !u!114 &1858370116887053180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953067771709931110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4488f1d617dbe1c89b73403d3c208829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7ed19b011d641fac1a3725537a0fc43a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 953067771709931111}
+        m_MethodName: OnHealthChanged
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 333
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
