@@ -10,10 +10,16 @@ namespace ca.HenrySoftware.Atom
 		protected void OnDisable() => Event?.Unregister(this);
 		public void Invoke() => Response?.Invoke();
 	}
-	public abstract class AtomEventHandler<T> : AtomEventHandler
+	public interface IAtomEventHandler<T>
 	{
-		public new AtomEvent<T> Event;
-		public new UnityEvent<T> Response;
+		void Invoke(T t);
+	}
+	public abstract class AtomEventHandler<T, E, UE> : AtomEventHandler, IAtomEventHandler<T>
+		where E : AtomEvent<T>
+		where UE : UnityEvent<T>
+	{
+		public new E Event;
+		public new UE Response;
 		public void Invoke(T t) => Response?.Invoke(t);
 	}
 }

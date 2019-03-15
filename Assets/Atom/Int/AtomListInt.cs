@@ -2,5 +2,5 @@
 namespace ca.HenrySoftware.Atom
 {
 	[CreateAssetMenu]
-	public class AtomListInt : AtomList<int> { }
+	public class AtomListInt : AtomList<int, AtomEvent<int>> { }
 }

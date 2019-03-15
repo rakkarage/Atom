@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 namespace ca.HenrySoftware.Atom
 {
 	public class AtomEvent : ScriptableObject
@@ -15,9 +16,9 @@ namespace ca.HenrySoftware.Atom
 	}
 	public abstract class AtomEvent<T> : AtomEvent
 	{
-		private List<AtomEventHandler<T>> Handlers = new List<AtomEventHandler<T>>();
-		public void Register(AtomEventHandler<T> handler) => Handlers.Add(handler);
-		public void Unregister(AtomEventHandler<T> handler) => Handlers.Remove(handler);
+		private List<IAtomEventHandler<T>> Handlers = new List<IAtomEventHandler<T>>();
+		public void Register(IAtomEventHandler<T> handler) => Handlers.Add(handler);
+		public void Unregister(IAtomEventHandler<T> handler) => Handlers.Remove(handler);
 		public void Raise(T t)
 		{
 			for (var i = Handlers.Count - 1; i > 0; i--)

@@ -2,13 +2,13 @@
 using UnityEngine;
 namespace ca.HenrySoftware.Atom
 {
-	public abstract class AtomList<T> : ScriptableObject
+	public abstract class AtomList<T, E> : ScriptableObject
+		where E : AtomEvent<T>
 	{
 		public List<T> Items = new List<T>();
-		public AtomEvent<T> Added;
-		public AtomEvent<T> Removed;
+		public E Added;
+		public E Removed;
 		public AtomEvent Cleared;
-		// todo: need use events!
 		public void Add(T t)
 		{
 			if (!Items.Contains(t))

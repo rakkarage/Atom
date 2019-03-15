@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 namespace ca.HenrySoftware.Atom
 {
-	public abstract class AtomReference<T> : ScriptableObject
+	public abstract class AtomReference<T, H, E, UE> : ScriptableObject
+		where H : AtomEventHandler<T, E, UE>
+		where E : AtomEvent<T>
+		where UE: UnityEvent<T>
 	{
-		public AtomEvent<T> Changed;
 		[SerializeField]
 		private T _value;
 		public T Value
@@ -15,5 +18,6 @@ namespace ca.HenrySoftware.Atom
 				Changed.Raise(_value);
 			}
 		}
+		public E Changed;
 	}
 }
