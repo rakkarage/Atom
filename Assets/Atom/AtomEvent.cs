@@ -14,7 +14,7 @@ namespace ca.HenrySoftware.Atom
 				Handlers[i].Invoke();
 		}
 	}
-	public abstract class AtomEvent<T> : AtomEvent
+	public abstract class AtomEvent<T> : ScriptableObject
 	{
 		private List<IAtomEventHandler<T>> Handlers = new List<IAtomEventHandler<T>>();
 		public void Register(IAtomEventHandler<T> handler) => Handlers.Add(handler);
