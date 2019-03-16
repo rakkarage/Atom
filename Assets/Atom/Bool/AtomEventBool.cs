@@ -1,6 +1,10 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 namespace ca.HenrySoftware.Atom
 {
 	[CreateAssetMenu]
 	public class AtomEventBool : AtomEvent<bool> { }
+	[Serializable]
+	public class UnityEventBool : UnityEvent<bool> { }
 }

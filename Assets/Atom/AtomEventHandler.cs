@@ -14,12 +14,12 @@ namespace ca.HenrySoftware.Atom
 	{
 		void Invoke(T t);
 	}
-	public abstract class AtomEventHandler<T, E, UE> : AtomEventHandler, IAtomEventHandler<T>
+	public abstract class AtomEventHandler<T, E, UE> : MonoBehaviour, IAtomEventHandler<T>
 		where E : AtomEvent<T>
 		where UE : UnityEvent<T>
 	{
-		public new E Event;
-		public new UE Response;
+		public E Event;
+		public UE Response;
 		public void Invoke(T t) => Response?.Invoke(t);
 	}
 }
