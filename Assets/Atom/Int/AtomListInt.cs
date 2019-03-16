@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 namespace ca.HenrySoftware.Atom
 {
-	[CreateAssetMenu]
+	[CreateAssetMenu(menuName = "Atom/Int")]
 	public class AtomListInt : AtomList<int, AtomEventInt> { }
 }

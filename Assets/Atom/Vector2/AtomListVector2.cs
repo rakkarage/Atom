@@ -1,6 +1,6 @@
 using UnityEngine;
 namespace ca.HenrySoftware.Atom
 {
-	[CreateAssetMenu]
+	[CreateAssetMenu(menuName = "Atom/Vector2")]
 	public class AtomListVector2 : AtomList<Vector2, AtomEventVector2> { }
 }

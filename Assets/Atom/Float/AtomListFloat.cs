@@ -1,6 +1,6 @@
 using UnityEngine;
 namespace ca.HenrySoftware.Atom
 {
-	[CreateAssetMenu]
+	[CreateAssetMenu(menuName = "Atom/Float")]
 	public class AtomListFloat : AtomList<float, AtomEventFloat> { }
 }
