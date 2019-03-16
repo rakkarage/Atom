@@ -150,6 +150,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: ca.HenrySoftware.Atom.UnityEventInt, Atom, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null

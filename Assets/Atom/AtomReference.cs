@@ -15,7 +15,7 @@ namespace ca.HenrySoftware.Atom
 			set
 			{
 				_value = value;
-				Changed.Raise(_value);
+				Changed?.Raise(_value);
 			}
 		}
 		public E Changed;
