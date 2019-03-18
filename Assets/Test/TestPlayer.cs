@@ -8,7 +8,7 @@ public class TestPlayer : MonoBehaviour
 	private void Start()
 	{
 		if (Reset)
-			Health = HealthStart;
+			Health.Value = HealthStart.Value;
 	}
 	private void OnTriggerEnter2D(Collider2D other)
 	{
