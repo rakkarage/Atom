@@ -21,7 +21,7 @@ namespace ca.HenrySoftware.Atom
 		public void Unregister(IAtomEventHandler<T> handler) => Handlers.Remove(handler);
 		public void Raise(T t)
 		{
-			for (var i = Handlers.Count - 1; i > 0; i--)
+			for (var i = Handlers.Count - 1; i >= 0; i--)
 				Handlers[i].Invoke(t);
 		}
 	}
