@@ -5,7 +5,7 @@ namespace ca.HenrySoftware.Atom
 	public abstract class AtomReference<T, H, E, UE> : ScriptableObject
 		where H : AtomEventHandler<T, E, UE>
 		where E : AtomEvent<T>
-		where UE: UnityEvent<T>
+		where UE : UnityEvent<T>
 	{
 		[SerializeField]
 		private T _value;

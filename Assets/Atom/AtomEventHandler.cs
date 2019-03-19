@@ -20,6 +20,8 @@ namespace ca.HenrySoftware.Atom
 	{
 		public E Event;
 		public UE Response;
+		protected void OnEnable() => Event?.Register(this);
+		protected void OnDisable() => Event?.Unregister(this);
 		public void Invoke(T t) => Response?.Invoke(t);
 	}
 }
