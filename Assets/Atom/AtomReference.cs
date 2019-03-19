@@ -2,8 +2,7 @@
 using UnityEngine.Events;
 namespace ca.HenrySoftware.Atom
 {
-	public abstract class AtomReference<T, H, E, UE> : ScriptableObject
-		where H : AtomEventHandler<T, E, UE>
+	public abstract class AtomReference<T, E, UE> : ScriptableObject
 		where E : AtomEvent<T>
 		where UE : UnityEvent<T>
 	{

@@ -3,5 +3,5 @@ using UnityEngine.Events;
 namespace ca.HenrySoftware.Atom
 {
 	[CreateAssetMenu(menuName = "Atom/String/AtomString")]
-	public class AtomString : AtomReference<string, AtomEventHandlerString, AtomEventString, UnityEventString> { }
+	public class AtomString : AtomReference<string, AtomEventString, UnityEventString> { }
 }
